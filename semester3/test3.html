@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест 3: СУБД Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Тест 3: СУБД Access</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html">Теоретическая часть</a></li>
+                <li><a href="../semester.html">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="test">
+            <h2>Системы управления базами данных</h2>
+            
+            <form id="accessTest">
+                <!-- Обновленные вопросы по Access -->
+                <div class="question">
+                    <p>1. Для какого поля необходимо заполнить следующую форму?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="1"> А) вычисляемый</label>
+                        <label><input type="radio" name="q1" value="2"> Б) логический</label>
+                        <label><input type="radio" name="q1" value="3"> В) вложение</label>
+                        <label><input type="radio" name="q1" value="4"> Г) мастер подстановок</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. К основным свойства полей таблицы БД относят:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="1"> А) имя, тип, размер, формат, подпись, значение по умолчанию, условие на значение</label>
+                        <label><input type="radio" name="q2" value="2"> Б) имя, тип, длинна, формат, заголовок</label>
+                        <label><input type="radio" name="q2" value="3"> В) имя, тип, заголовок, условие на значение и значение по умолчанию</label>
+                        <label><input type="radio" name="q2" value="4"> Г) формат, размер, тип, имя, подпись</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>3. Заголовок столбца таблицы для поля определяет:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="1"> А) имя поля или подпись</label>
+                        <label><input type="radio" name="q3" value="2"> Б) подпись</label>
+                        <label><input type="radio" name="q3" value="3"> В) название поля</label>
+                        <label><input type="radio" name="q3" value="4"> Г) заголовок поля</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Какой тип данных необходимо выбрать для ввода номеров телефонов NNN-NN-NN?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="1"> А) Числовой</label>
+                        <label><input type="radio" name="q4" value="2"> Б) Текстовый</label>
+                        <label><input type="radio" name="q4" value="3"> В) Дата/время</label>
+                        <label><input type="radio" name="q4" value="4"> Г) MEMO</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>5. Для чего предназначено окно «Схема данных»?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="1"> А) Для просмотра таблиц</label>
+                        <label><input type="radio" name="q5" value="2"> Б) Для редактирования записей</label>
+                        <label><input type="radio" name="q5" value="3"> В) Для создания связей между запросами и формами</label>
+                        <label><input type="radio" name="q5" value="4"> Г) Для создания связей между таблицами</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>6. Между какими объектами устанавливаются связи?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="1"> А) Между запросами</label>
+                        <label><input type="radio" name="q6" value="2"> Б) Между формами</label>
+                        <label><input type="radio" name="q6" value="3"> В) Между отчетами</label>
+                        <label><input type="radio" name="q6" value="4"> Г) Между таблицами</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>7. Каково назначение ключевого поля?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="1"> А) Сортировка данных</label>
+                        <label><input type="radio" name="q7" value="2"> Б) Фильтрация данных</label>
+                        <label><input type="radio" name="q7" value="3"> В) Создание новых таблиц</label>
+                        <label><input type="radio" name="q7" value="4"> Г) Создание связей между таблицами</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>8. Для хранения данных в СУБД MS Access используется:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="1"> А) форма</label>
+                        <label><input type="radio" name="q8" value="2"> Б) таблица</label>
+                        <label><input type="radio" name="q8" value="3"> В) отчет</label>
+                        <label><input type="radio" name="q8" value="4"> Г) запрос</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>9. Для чего предназначено диалоговое окно «Добавить таблицу» в окне «Схема данных»?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="1"> А) Для выбора таблиц, с которыми устанавливаются связи</label>
+                        <label><input type="radio" name="q9" value="2"> Б) Для создания формы</label>
+                        <label><input type="radio" name="q9" value="3"> В) Для создания запроса</label>
+                        <label><input type="radio" name="q9" value="4"> Г) Для удаления записей из таблицы</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>10. Что называют первичным ключом таблицы?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="1"> А) Строку таблицы, содержащую уникальную информацию</label>
+                        <label><input type="radio" name="q10" value="2"> Б) Столбец таблицы, содержащий неуникальную информацию</label>
+                        <label><input type="radio" name="q10" value="3"> В) Совокупность полей таблицы, которые однозначно определяют каждую запись</label>
+                        <label><input type="radio" name="q10" value="4"> Г) Столбец таблицы, содержащий уникальную информацию</label>
+                    </div>
+                </div>
+
+                <div id="result"></div>
+                <button type="button" onclick="checkTest()">Проверить ответы</button>
+                <div id="answersExplanation" style="margin-top: 20px;"></div>
+            </form>
+        </section>
+    </div>
+
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+    <script>
+        const correctAnswers = {
+            q1: "1",  // вычисляемый
+            q2: "1",  // имя, тип, размер, формат, подпись, значение по умолчанию, условие на значение
+            q3: "1",  // имя поля или подпись
+            q4: "2",  // Текстовый
+            q5: "4",  // Для создания связей между таблицами
+            q6: "4",  // Между таблицами
+            q7: "4",  // Создание связей между таблицами
+            q8: "2",  // таблица
+            q9: "1",  // Для выбора таблиц, с которыми устанавливаются связи
+            q10: "3"  // Совокупность полей таблицы, которые однозначно определяют каждую запись
+        };
+
+        const explanations = {
+            q1: { text: "Правильный ответ: Вычисляемые поля требуют заполнения специальной формы для определения выражения" },
+            q2: { text: "Правильный ответ: Основные свойства включают имя, тип данных, размер, формат отображения, подпись, значение по умолчанию и условия проверки" },
+            q3: { text: "Правильный ответ: Заголовок столбца может отображать либо техническое имя поля, либо пользовательскую подпись" },
+            q4: { text: "Правильный ответ: Номера телефонов лучше хранить как текст, так как они содержат спецсимволы и не используются в вычислениях" },
+            q5: { text: "Правильный ответ: Окно 'Схема данных' используется для создания и управления связями между таблицами" },
+            q6: { text: "Правильный ответ: Связи устанавливаются исключительно между таблицами для обеспечения целостности данных" },
+            q7: { text: "Правильный ответ: Ключевое поле обеспечивает создание связей между таблицами и уникальную идентификацию записей" },
+            q8: { text: "Правильный ответ: Основное хранилище данных в Access - таблицы, остальные объекты работают с этими данными" },
+            q9: { text: "Правильный ответ: Это окно позволяет выбрать таблицы, между которыми будут устанавливаться связи" },
+            q10: { text: "Правильный ответ: Первичный ключ может состоять из одного или нескольких полей, обеспечивающих уникальность записи" }
+        };
+
+        function checkTest() {
+            let score = 0;
+            let details = [];
+
+            for (let i = 1; i <= 10; i++) {
+                const question = `q${i}`;
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                const isCorrect = selected && selected.value === correctAnswers[question];
+
+                if (isCorrect) score++;
+
+                details.push(`
+                    <div class="explanation-box ${isCorrect ? 'correct' : 'incorrect'}">
+                        <strong>Вопрос ${i}:</strong>
+                        <p>${explanations[question].text}</p>
+                        ${!isCorrect ? `<p>Ваш ответ: ${selected ? selected.parentElement.textContent.trim() : 'Нет ответа'}</p>` : ''}
+                    </div>
+                `);
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `Правильных ответов: ${score} из 10`;
+            resultDiv.style.color = score >= 6 ? "#1b5e20" : "#d32f2f";
+
+            document.getElementById("answersExplanation").innerHTML = `
+                <h3 style="margin-top: 20px; color: #1b5e20;">Подробные пояснения:</h3>
+                ${details.join('')}
+            `;
+        }
+    </script>
+
+    <script>
+    // Получаем текущий путь 
+        const currentPath = window.location.pathname.split("semester2/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+    <style>
+        .explanation-box {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 5px solid;
+        }
+        .correct {
+            background-color: #e8f5e9;
+            border-color: #1b5e20;
+        }
+        .incorrect {
+            background-color: #ffebee;
+            border-color: #d32f2f;
+        }
+        .explanation-box p {
+            margin: 8px 0;
+            color: #2e7d32;
+        }
+        .explanation-box strong {
+            color: #1b5e20;
+        }
+    </style>
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+</body>
+</html>

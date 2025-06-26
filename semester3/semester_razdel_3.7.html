@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Семестр 2</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html">Теоретическая часть</a></li>
+                <li><a href="../semester.html" class="active">Семестр</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>РАЗДЕЛ 7. Локальные и глобальные сети ЭВМ</h2>
+            <div class="modules-grid">
+
+                <!-- Тема 7.1 -->
+                <a href="Лекция 15.1 локальные и голобал сети эвм.ppt" class="module-card" download>
+                    <h3>Тема 7.1. Сетевые технологии обработки данных.</h3>
+                    <!-- поменять файл -->
+                </a>
+
+                <!-- Тема 7.2 -->
+                <a href="Лекция 15.1 локальные и голобал сети эвм.ppt" class="module-card" download>
+                    <h3>Тема 7.2. Сетевой сервис и сетевые стандарты.</h3><!-- поменять файл -->
+                </a>
+                
+            </div>
+        </section>
+    </div>
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+    // Получаем текущий путь (например: "semester2/semester_razdel_2.1.html")
+        const currentPath = window.location.pathname.split("semester2/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест 4: СУБД Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Тест 4: СУБД Access</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html">Теоретическая часть</a></li>
+                <li><a href="../semester.html">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="test">
+            <h2>Системы управления базами данных</h2>
+            
+            <form id="accessTest">
+                <!-- Обновленные вопросы по Access -->
+                <div class="question">
+                    <p>1. В каком режиме формы можно добавить элементы управления?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="1"> А) В режиме мастера</label>
+                        <label><input type="radio" name="q1" value="2"> Б) В режиме автоформы</label>
+                        <label><input type="radio" name="q1" value="3"> В) В режиме конструктора</label>
+                        <label><input type="radio" name="q1" value="4"> Г) В режиме таблицы</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Режим таблицы СУБД MS Access позволяет:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="1"> А) вносить и редактировать данные в таблице</label>
+                        <label><input type="radio" name="q2" value="2"> Б) создавать таблицу и редактировать ее, вносить данные</label>
+                        <label><input type="radio" name="q2" value="3"> В) создавать таблицы, формировать отчеты и запросы</label>
+                        <label><input type="radio" name="q2" value="4"> Г) создавать таблицы и формы</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>3. В СУБД MS Access отчеты создаются на вкладе «Создание» с помощью кнопки:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="1"> А) Пустой отчет</label>
+                        <label><input type="radio" name="q3" value="2"> Б) Конструктор отчетов</label>
+                        <label><input type="radio" name="q3" value="3"> В) Мастер отчетов</label>
+                        <label><input type="radio" name="q3" value="4"> Г) Всех вышеперечисленных</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Выделяют следующие способы создания таблиц в СУБД MS Access:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="1"> А) В виде представления таблицы аналогично работе в табличном редакторе</label>
+                        <label><input type="radio" name="q4" value="2"> Б) С помощью службы Access и дополнительного компонента SharePoint</label>
+                        <label><input type="radio" name="q4" value="3"> В) С помощью конструктора вручную</label>
+                        <label><input type="radio" name="q4" value="4"> Г) Все варианты верны</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>5. В режиме таблицы СУБД MS Access нельзя:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="1"> А) Удалять и добавлять поля</label>
+                        <label><input type="radio" name="q5" value="2"> Б) Редактировать записи</label>
+                        <label><input type="radio" name="q5" value="3"> В) Настраивать свойства поля</label>
+                        <label><input type="radio" name="q5" value="4"> Г) Верный вариант отсутствует</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>6. Для чего предназначен перекрестный запрос?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="1"> А) Для создания итоговой таблицы</label>
+                        <label><input type="radio" name="q6" value="2"> Б) Для замены данных</label>
+                        <label><input type="radio" name="q6" value="3"> В) Для вывода данных, соответствующих условию отбора</label>
+                        <label><input type="radio" name="q6" value="4"> Г) Для внесения изменений в несколько таблиц</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>7. Создание индексов для поля с каким типом данных не допускается при фильтрации данных:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="1"> А) гиперссылка</label>
+                        <label><input type="radio" name="q7" value="2"> Б) текст</label>
+                        <label><input type="radio" name="q7" value="3"> В) дата/время</label>
+                        <label><input type="radio" name="q7" value="4"> Г) числовой</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>8. Макросы в СУБД MS Access используются для:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="1"> А) ввода и редактирования данных</label>
+                        <label><input type="radio" name="q8" value="2"> Б) автоматизации работы</label>
+                        <label><input type="radio" name="q8" value="3"> В) создания подпрограмм</label>
+                        <label><input type="radio" name="q8" value="4"> Г) экспорта данных</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>9. Экспорт и импорт данных можно выполнить на вкладке:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="1"> А) Главная</label>
+                        <label><input type="radio" name="q9" value="2"> Б) Работа с базами данных</label>
+                        <label><input type="radio" name="q9" value="3"> В) Внешние данные</label>
+                        <label><input type="radio" name="q9" value="4"> Г) Конструктор</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>10. Какие данные можно экспортировать в документ MS Word из MS Access?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="1"> А) Таблицу и запрос</label>
+                        <label><input type="radio" name="q10" value="2"> Б) Таблицу и форму</label>
+                        <label><input type="radio" name="q10" value="3"> В) Таблицу и отчет</label>
+                        <label><input type="radio" name="q10" value="4"> Г) Таблицу, запрос, форму и отчет</label>
+                    </div>
+                </div>
+
+                <div id="result"></div>
+                <button type="button" onclick="checkTest()">Проверить ответы</button>
+                <div id="answersExplanation" style="margin-top: 20px;"></div>
+            </form>
+        </section>
+    </div>
+
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+    <script>
+        const correctAnswers = {
+            q1: "3",  // В режиме конструктора
+            q2: "2",  // создавать таблицу и редактировать ее, вносить данные
+            q3: "4",  // Всех вышеперечисленных
+            q4: "4",  // Все варианты верны
+            q5: "4",  // Верный вариант отсутствует
+            q6: "1",  // Для создания итоговой таблицы
+            q7: "1",  // гиперссылка
+            q8: "2",  // автоматизации работы
+            q9: "3",  // Внешние данные
+            q10: "4"  // Таблицу, запрос, форму и отчет
+        };
+
+        const explanations = {
+            q1: { text: "Правильный ответ: В режиме конструктора. Только в этом режиме доступно ручное добавление элементов управления (кнопок, полей, меток и т.д.)" },
+            q2: { text: "Правильный ответ: Создавать таблицу и редактировать ее, вносить данные. Режим таблицы позволяет выполнять все базовые операции с таблицами" },
+            q3: { text: "Правильный ответ: Всех вышеперечисленных. Отчеты можно создавать всеми перечисленными способами в зависимости от потребностей" },
+            q4: { text: "Правильный ответ: Все варианты верны. Access поддерживает несколько способов создания таблиц" },
+            q5: { text: "Правильный ответ: Верный вариант отсутствует. В режиме таблицы доступны все перечисленные операции" },
+            q6: { text: "Правильный ответ: Для создания итоговой таблицы. Перекрестные запросы используются для агрегации данных и создания сводных таблиц" },
+            q7: { text: "Правильный ответ: Гиперссылка. Для полей этого типа нельзя создавать индексы для фильтрации" },
+            q8: { text: "Правильный ответ: Автоматизации работы. Макросы позволяют автоматизировать повторяющиеся задачи и сложные операции" },
+            q9: { text: "Правильный ответ: Внешние данные. Эта вкладка содержит все инструменты для импорта и экспорта" },
+            q10: { text: "Правильный ответ: Таблицу, запрос, форму и отчет. Любой объект Access можно экспортировать в Word" }
+        };
+
+        function checkTest() {
+            let score = 0;
+            let details = [];
+
+            for (let i = 1; i <= 10; i++) {
+                const question = `q${i}`;
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                const isCorrect = selected && selected.value === correctAnswers[question];
+
+                if (isCorrect) score++;
+
+                details.push(`
+                    <div class="explanation-box ${isCorrect ? 'correct' : 'incorrect'}">
+                        <strong>Вопрос ${i}:</strong>
+                        <p>${explanations[question].text}</p>
+                        ${!isCorrect ? `<p>Ваш ответ: ${selected ? selected.parentElement.textContent.trim() : 'Нет ответа'}</p>` : ''}
+                    </div>
+                `);
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `Правильных ответов: ${score} из 10`;
+            resultDiv.style.color = score >= 6 ? "#1b5e20" : "#d32f2f";
+
+            document.getElementById("answersExplanation").innerHTML = `
+                <h3 style="margin-top: 20px; color: #1b5e20;">Подробные пояснения:</h3>
+                ${details.join('')}
+            `;
+        }
+    </script>
+
+    <script>
+    // Получаем текущий путь 
+        const currentPath = window.location.pathname.split("semester2/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+    <style>
+        .explanation-box {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 5px solid;
+        }
+        .correct {
+            background-color: #e8f5e9;
+            border-color: #1b5e20;
+        }
+        .incorrect {
+            background-color: #ffebee;
+            border-color: #d32f2f;
+        }
+        .explanation-box p {
+            margin: 8px 0;
+            color: #2e7d32;
+        }
+        .explanation-box strong {
+            color: #1b5e20;
+        }
+    </style>
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+</body>
+</html>

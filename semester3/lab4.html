@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа: 3.4 Язык SQL</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Общие стили для шапки и подвала */
+        body > header, body > footer {
+            width: 100%;
+            background-color: #199cff;
+            color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 0;
+            margin: 0;
+        }
+        
+        .header-container, .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Основной контейнер без фона */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        /* Специфичные стили для разделов */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        .syntax {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.8;
+        }
+        
+        .keyword {
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .variable {
+            color: #e74c3c;
+            font-style: italic;
+        }
+        
+        .example {
+            background: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .example h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .task {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .task h3 {
+            color: #27ae60;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .task h3:before {
+            content: "✓";
+            margin-right: 10px;
+            color: #27ae60;
+        }
+        
+        .content textarea {
+            width: 100%;
+            height: 100px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            margin: 10px 0;
+            resize: vertical;
+        }
+        
+        .content button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .content button:hover {
+            background: #2980b9;
+        }
+        
+        .result {
+            font-weight: bold;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .table-info {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .table-info h4 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .table-info ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .table-info li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .table-info li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: -15px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка с растянутым голубым фоном -->
+    <header>
+        <div class="header-container">
+            <h1>Семестр 2</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">О курсе</a></li>
+                    <li><a href="../theory.html">Теоретическая часть</a></li>
+                    <li><a href="../semester.html" class="active">Семестры</a></li>  
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Основной контент -->
+    <div class="container">
+        <div class="content">
+            <div class="section">
+                <h2>Основы языка SQL</h2>
+                
+                <p>SQL (язык структурированных запросов) основывается на концепции операций отображения. Применительно к селекции это сводится к просмотру столбцов в таблице с целью обнаружения некоторого значения или совокупности значений.</p>
+                
+                <div class="syntax">
+                    <span class="keyword">SELECT</span> &lt;список полей&gt;;<br>
+                    <span class="keyword">FROM</span> &lt;список таблиц&gt; [метка];<br>
+                    [<span class="keyword">WHERE</span> &lt;условие выбора строк&gt;];<br>
+                    [<span class="keyword">GROUP BY</span> &lt;имя атрибута&gt;];<br>
+                    [<span class="keyword">HAVING</span> &lt;выбор группы&gt;];<br>
+                    [<span class="keyword">ORDER BY</span> &lt;имя атрибута&gt;];
+                </div>
+                
+                <h3>Соглашения:</h3>
+                <ul>
+                    <li>Ключевые слова вводятся ПРОПИСНЫМИ БУКВАМИ</li>
+                    <li>Имена переменных пользователя представляются курсивом</li>
+                    <li>Угловые скобки &lt; &gt; заключают элемент синтаксиса, который необходимо задать</li>
+                    <li>Квадратные скобки [ ] заключают необязательные элементы</li>
+                </ul>
+                
+                <div class="example">
+                    <h4>Пример 1: Простой запрос</h4>
+                    <p>Найти фамилии всех сотрудников техников.</p>
+                    <div class="syntax">
+                        <span class="keyword">SELECT</span> Фамилия;<br>
+                        <span class="keyword">FROM</span> Сотрудник;<br>
+                        <span class="keyword">WHERE</span> Специальность = "техник";
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <h4>Пример 2: Условия с AND</h4>
+                    <p>Перечислить фамилии всех сотрудников администраторов сети, работающих в РТА.</p>
+                    <div class="syntax">
+                        <span class="keyword">SELECT</span> Фамилия;<br>
+                        <span class="keyword">FROM</span> Сотрудник;<br>
+                        <span class="keyword">WHERE</span> Специальность = "администратор сети" <span class="keyword">AND</span> [Код подразделения] = "РТА";
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Практические задания</h2>
+                
+                <div class="table-info">
+                    <h4>Структура таблиц:</h4>
+                    <p><strong>Таблица "Сотрудник":</strong></p>
+                    <ul>
+                        <li>Фамилия (текст)</li>
+                        <li>Специальность (текст)</li>
+                        <li>[Код подразделения] (текст)</li>
+                    </ul>
+                    
+                    <p><strong>Таблица "Персонал":</strong></p>
+                    <ul>
+                        <li>[Номер служащего] (целое число)</li>
+                        <li>[Код организации] (текст)</li>
+                        <li>Должность (текст)</li>
+                        <li>Зарплата (целое число)</li>
+                    </ul>
+                </div>
+                
+                <div class="task">
+                    <h3>Задание 1: Выбор уникальных значений</h3>
+                    <p>Перечислить различные специальности сотрудников.</p>
+                    <textarea id="sql1" placeholder="Введите SQL запрос..."></textarea>
+                    <button onclick="checkSQL(1)">Проверить</button>
+                    <div id="result1" class="result"></div>
+                </div>
+                
+                <div class="task">
+                    <h3>Задание 2: Агрегатные функции</h3>
+                    <p>Какова численность обслуживающего персонала РТА.</p>
+                    <textarea id="sql2" placeholder="Введите SQL запрос..."></textarea>
+                    <button onclick="checkSQL(2)">Проверить</button>
+                    <div id="result2" class="result"></div>
+                </div>
+                
+                <div class="task">
+                    <h3>Задание 3: Группировка и условия</h3>
+                    <p>Найти среднюю зарплату по тем должностям, для которых минимальная зарплата превышает 100000 рублей.</p>
+                    <textarea id="sql3" placeholder="Введите SQL запрос..."></textarea>
+                    <button onclick="checkSQL(3)">Проверить</button>
+                    <div id="result3" class="result"></div>
+                </div>
+                
+                <div class="task">
+                    <h3>Задание 4: Сложные условия</h3>
+                    <p>Найти всех сотрудников с зарплатой более 120000 рублей, работающих в подразделении "ИТ" или "Разработка".</p>
+                    <textarea id="sql4" placeholder="Введите SQL запрос..."></textarea>
+                    <button onclick="checkSQL(4)">Проверить</button>
+                    <div id="result4" class="result"></div>
+                </div>
+                
+                <div class="task">
+                    <h3>Задание 5: Сортировка результатов</h3>
+                    <p>Вывести фамилии и зарплаты сотрудников, отсортированные по убыванию зарплаты.</p>
+                    <textarea id="sql5" placeholder="Введите SQL запрос..."></textarea>
+                    <button onclick="checkSQL(5)">Проверить</button>
+                    <div id="result5" class="result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Подвал с растянутым голубым фоном -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+    <script>
+        // Эталонные ответы
+        const answers = {
+            1: "SELECT DISTINCT Специальность FROM Сотрудник;",
+            2: "SELECT COUNT([Номер служащего]) FROM Персонал WHERE [Код организации] = 'РТА';",
+            3: "SELECT Должность, AVG(Зарплата) FROM Персонал GROUP BY Должность HAVING MIN(Зарплата)>100000;",
+            4: "SELECT * FROM Персонал WHERE Зарплата > 120000 AND ([Код подразделения] = 'ИТ' OR [Код подразделения] = 'Разработка');",
+            5: "SELECT Фамилия, Зарплата FROM Персонал ORDER BY Зарплата DESC;"
+        };
+        
+        // Функция нормализации SQL запроса
+        function normalizeSQL(sql) {
+            // Удаляем комментарии
+            sql = sql.replace(/--.*$/gm, '');
+            
+            // Удаляем лишние пробелы и точку с запятой в конце
+            sql = sql.trim().replace(/;+$/, '');
+            
+            // Заменяем множественные пробелы на один
+            sql = sql.replace(/\s+/g, ' ');
+            
+            // Приводим ключевые слова к верхнему регистру
+            const keywords = [
+                'SELECT', 'FROM', 'WHERE', 'AND', 'OR', 'GROUP BY', 'HAVING', 
+                'ORDER BY', 'COUNT', 'AVG', 'MIN', 'MAX', 'SUM', 'DISTINCT', 'AS', 'DESC'
+            ];
+            
+            keywords.forEach(kw => {
+                const regex = new RegExp('\\b' + kw + '\\b', 'gi');
+                sql = sql.replace(regex, kw);
+            });
+            
+            // Стандартизируем кавычки
+            sql = sql.replace(/"/g, "'");
+            
+            return sql;
+        }
+        
+        // Функция проверки SQL запроса
+        function checkSQL(taskNum) {
+            const textarea = document.getElementById(`sql${taskNum}`);
+            const resultElement = document.getElementById(`result${taskNum}`);
+            const userQuery = textarea.value;
+            
+            if (!userQuery.trim()) {
+                resultElement.textContent = "Пожалуйста, введите SQL запрос";
+                resultElement.className = "result incorrect";
+                return;
+            }
+            
+            const normalizedUser = normalizeSQL(userQuery);
+            const normalizedAnswer = normalizeSQL(answers[taskNum]);
+            
+            if (normalizedUser === normalizedAnswer) {
+                resultElement.textContent = "✓ Верно! Отличная работа!";
+                resultElement.className = "result correct";
+            } else {
+                resultElement.innerHTML = `
+                    ✗ Ошибка!<br><br>
+                    <strong>Ваш запрос:</strong> ${userQuery}<br>
+                    <strong>Ожидалось:</strong> ${answers[taskNum]}<br><br>
+                    Пожалуйста, проверьте синтаксис и попробуйте снова.
+                `;
+                resultElement.className = "result incorrect";
+            }
+        }
+    </script>
+</body>
+</html>

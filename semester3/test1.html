@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест 1: СУБД Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Тест 1: СУБД Access</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html">Теоретическая часть</a></li>
+                <li><a href="../semester.html">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="test">
+            <h2>Системы управления базами данных</h2>
+            
+            <form id="accessTest">
+                <!-- Обновленные вопросы по Access -->
+                <div class="question">
+                    <p>1. Какое расширение имеет файл СУБД MS Access?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="1"> А) .xls</label>
+                        <label><input type="radio" name="q1" value="2"> Б) .doc</label>
+                        <label><input type="radio" name="q1" value="3"> В) .accdb</label>
+                        <label><input type="radio" name="q1" value="4"> Г) .dbf</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Когда приложение СУБД MS Access создает файл для работы с приложением?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="1"> А) В начале работы с документом</label>
+                        <label><input type="radio" name="q2" value="2"> Б) При закрытии документа</label>
+                        <label><input type="radio" name="q2" value="3"> В) В заданное пользователем время</label>
+                        <label><input type="radio" name="q2" value="4"> Г) Только после сохранения документа</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>3. Основными объектами СУБД MS Access являются:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="1"> А) таблицы, формы, запросы, отчеты</label>
+                        <label><input type="radio" name="q3" value="2"> Б) формы, таблицы, строки, отчеты</label>
+                        <label><input type="radio" name="q3" value="3"> В) отчеты, таблицы, формы</label>
+                        <label><input type="radio" name="q3" value="4"> Г) Формы, таблицы, запросы, выборки</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Основным объектом базы данных СУБД MS Access является:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="1"> А) форма</label>
+                        <label><input type="radio" name="q4" value="2"> Б) выборка</label>
+                        <label><input type="radio" name="q4" value="3"> В) таблица</label>
+                        <label><input type="radio" name="q4" value="4"> Г) отчет</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>5. Запросы в СУБД MS Access предназначены для:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="1"> А) поиска и сортировки данных</label>
+                        <label><input type="radio" name="q5" value="2"> Б) добавления и просмотра данных</label>
+                        <label><input type="radio" name="q5" value="3"> В) поиска, сортировки, добавления и удаления, обновления записей</label>
+                        <label><input type="radio" name="q5" value="4"> Г) для редактирования данных в таблице</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>6. Отчет в СУБД MS Access предназначен для:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="1"> А) хранения данных</label>
+                        <label><input type="radio" name="q6" value="2"> Б) вывода данных на печать</label>
+                        <label><input type="radio" name="q6" value="3"> В) ввода и редактирования данных</label>
+                        <label><input type="radio" name="q6" value="4"> Г) создания команд для автоматизации работы</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>7. Мастер подстановок в СУБД MS Access используется:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="1"> А) для создания нового поля в таблице</label>
+                        <label><input type="radio" name="q7" value="2"> Б) для создания новых таблиц</label>
+                        <label><input type="radio" name="q7" value="3"> В) для добавления значений полей из других таблиц или фиксированного списка данных</label>
+                        <label><input type="radio" name="q7" value="4"> Г) для ввода или вывода выражений</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>8. Какие типы данных используются в СУБД MS Access для хранения графических объектов?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="1"> А) Текстовый</label>
+                        <label><input type="radio" name="q8" value="2"> Б) OLE</label>
+                        <label><input type="radio" name="q8" value="3"> В) MEMO</label>
+                        <label><input type="radio" name="q8" value="4"> Г) Гиперссылка</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>9. Какой тип данных необходимо выбрать для ввода суммы 4784 рублей, 67 $?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="1"> А) Числовой</label>
+                        <label><input type="radio" name="q9" value="2"> Б) Финансовый</label>
+                        <label><input type="radio" name="q9" value="3"> В) Денежный</label>
+                        <label><input type="radio" name="q9" value="4"> Г) Текстовый</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>10. В поле OLE СУБД MS Access можно разместить:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="1"> А) изображение или лист MS Excel</label>
+                        <label><input type="radio" name="q10" value="2"> Б) большие фрагменты текста</label>
+                        <label><input type="radio" name="q10" value="3"> В) ссылки</label>
+                        <label><input type="radio" name="q10" value="4"> Г) логические значения</label>
+                    </div>
+                </div>
+
+                <div id="result"></div>
+                <button type="button" onclick="checkTest()">Проверить ответы</button>
+                <div id="answersExplanation" style="margin-top: 20px;"></div>
+            </form>
+        </section>
+    </div>
+
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+    <script>
+        const correctAnswers = {
+            q1: "3",  // .accdb
+            q2: "1",  // В начале работы
+            q3: "1",  // таблицы, формы, запросы, отчеты
+            q4: "3",  // таблица
+            q5: "3",  // поиск, сортировка, добавление и удаление
+            q6: "2",  // вывод на печать
+            q7: "3",  // добавление значений из других таблиц
+            q8: "2",  // OLE
+            q9: "3",  // Денежный
+            q10: "1"  // изображение или Excel
+        };
+
+        const explanations = {
+            q1: { text: "Правильный ответ: Файлы Microsoft Access имеют расширение .accdb" },
+            q2: { text: "Правильный ответ: Access создает файл при начале работы с документом" },
+            q3: { text: "Правильный ответ: Основные объекты - таблицы, формы, запросы, отчеты" },
+            q4: { text: "Правильный ответ: Таблица является основным объектом для хранения данных" },
+            q5: { text: "Правильный ответ: Запросы позволяют выполнять комплексные операции с данными" },
+            q6: { text: "Правильный ответ: Отчеты предназначены для форматированного вывода на печать" },
+            q7: { text: "Правильный ответ: Мастер подстановок связывает данные между таблицами" },
+            q8: { text: "Правильный ответ: Тип OLE предназначен для хранения мультимедийных объектов" },
+            q9: { text: "Правильный ответ: Денежный тип данных оптимален для финансовых значений" },
+            q10: { text: "Правильный ответ: Поля OLE поддерживают внедрение объектов других приложений" }
+        };
+
+        function checkTest() {
+            let score = 0;
+            let details = [];
+
+            for (let i = 1; i <= 10; i++) {
+                const question = `q${i}`;
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                const isCorrect = selected && selected.value === correctAnswers[question];
+
+                if (isCorrect) score++;
+
+                details.push(`
+                    <div class="explanation-box ${isCorrect ? 'correct' : 'incorrect'}">
+                        <strong>Вопрос ${i}:</strong>
+                        <p>${explanations[question].text}</p>
+                        ${!isCorrect ? `<p>Ваш ответ: ${selected ? selected.parentElement.textContent.trim() : 'Нет ответа'}</p>` : ''}
+                    </div>
+                `);
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `Правильных ответов: ${score} из 10`;
+            resultDiv.style.color = score >= 6 ? "#1b5e20" : "#d32f2f";
+
+            document.getElementById("answersExplanation").innerHTML = `
+                <h3 style="margin-top: 20px; color: #1b5e20;">Подробные пояснения:</h3>
+                ${details.join('')}
+            `;
+        }
+    </script>
+
+    <script>
+    // Получаем текущий путь 
+        const currentPath = window.location.pathname.split("semester2/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+    <style>
+        .explanation-box {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 5px solid;
+        }
+        .correct {
+            background-color: #e8f5e9;
+            border-color: #1b5e20;
+        }
+        .incorrect {
+            background-color: #ffebee;
+            border-color: #d32f2f;
+        }
+        .explanation-box p {
+            margin: 8px 0;
+            color: #2e7d32;
+        }
+        .explanation-box strong {
+            color: #1b5e20;
+        }
+    </style>
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+</body>
+</html>

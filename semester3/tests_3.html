@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тесты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Тесты</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html">Теоретическая часть</a></li>
+                <li><a href="../semester.html" class="active">Семестры</a></li>  
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="tests">
+            <h2>Тесты</h2>
+            <div class="modules-grid">
+                <!-- Тест 1-11 -->
+                <a href="test1.html" class="module-card">
+                    <h3>Тест 1: Тест по SQL СУБД MS Access</h3>
+                    <p></p>
+                </a>
+
+
+                <a href="test2.html" class="module-card">
+                    <h3>Тест 2: Тест по SQL СУБД MS Access</h3>
+                    <p></p>
+                </a>
+
+                <a href="test3.html" class="module-card">
+                    <h3>Тест 3: Тест по SQL СУБД MS Access</h3>
+                    <p></p>
+                </a>
+
+                <a href="test4.html" class="module-card">
+                    <h3>Тест 4: Тест по SQL СУБД MS Access</h3>
+                    <p></p>
+                </a>			
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+    
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>
