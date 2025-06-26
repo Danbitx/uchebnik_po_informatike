@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Семестр 1</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html">Теоретическая часть</a></li>
+                <li><a href="../semester.html" class="active">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>РАЗДЕЛ 3. Программные средства реализации информационных процессов.</h2>
+            <div class="modules-grid">
+
+
+                <!-- Тема 3.1 -->
+                <a href="Лекция 5. раздел 3 тема 3,1 Операционная система Windows.pptx" class="module-card" download>
+                    <h3>Тема 3.1. Операционная система MS Windows.</h3>
+                </a>
+
+                <!-- Тема 3.2 -->
+                <a href="Лекция 6 раздел 3 тема 3,2.pptx" class="module-card" download>
+                    <h3>Тема 3.2. Служебное программное обеспечение.</h3>
+                </a>
+
+                <!-- Тема 3.3 -->
+                <a href="Лекция 5. раздел 3 тема 3,1 Операционная система Windows.pptx" class="module-card" download>
+                    <h3>Тема 3.3. Технология обработки текстовой информации.</h3><!-- нет файла -->
+                </a>
+
+                <!-- Тема 3.4 
+                <a href="Лекция 8 раздел 3 тема 3,4.pptx" class="module-card" download>-->
+                <a href="semester_razdel_2.3_3.4.html" class="module-card"> 
+                    <h3>Тема 3.4. Электронные таблицы.</h3>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+    // Получаем текущий путь (например: "semester2/semester_razdel_2.1.html")
+        const currentPath = window.location.pathname.split("semester2/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

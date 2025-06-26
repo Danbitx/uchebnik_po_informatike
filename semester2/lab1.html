@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 3.4</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .matrix {
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        .matrix td {
+            padding: 5px;
+            text-align: center;
+        }
+        .input-cell {
+            width: 40px;
+            margin: 2px;
+        }
+        .result {
+            color: green;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+        }
+        .task {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        textarea {
+            width: 300px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+        <header>
+        <h1>Семестр 1</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html">Теоретическая часть</a></li>
+                <li><a href="../semester.html" class="active">Семестры</a></li>  
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Лабораторная работа: Электронные таблицы</h2>
+
+    <!-- Задание 1 -->
+    <div class="task">
+        <h3>Задание 1: Сложение матриц</h3>
+        <!-- Добавлено описание и картинка -->
+        <div class="description">
+            <p> Следует отметить, что складывать и вычитать можно матрицы одинаковой размерности (одинаковое количество строк и столбцов у каждой из матриц).<br>Рассмотрим матрицы <b>А</b> и <b>В</b> размерностью <b>3х3</b>. Вычислим сумму этих матриц.<br>Для этого в ячейку <b>H77</b> введем формулу <b>=C75+C79</b>, где <b>C75</b> и <b>C79</b> – первые элементы матриц <b>А</b> и <b>В</b> соответственно. <br>При этом формула содержит относительные ссылки <b>C75 и C79</b>, чтобы при копировании формулы на весь диапазон матрицы <b>С</b> они могли измениться.</p>
+            <img src="media/image1.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>С помощью маркера автозаполнения скопируем формулу из ячейки <b>H77</b> вниз и вправо на весь диапазон матрицы <b>С</b>.</p>
+            <img src="media/image2.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Для вычитания матрицы <b>В</b> из матрицы <b>А (С=А - В)</b> в ячейку <b>H77</b> введем формулу <b>=C75-C79</b> и скопируем её на весь диапазон матрицы <b>С</b>.</p>
+            <p>Сделайте вычисления в Excel и проверьте ваш ответ.</p>
+        </div>
+
+        <p>Даны матрицы:</p>
+        <div class="matrix">
+            A = 
+            <table>
+                <tr><td>0</td><td>5</td><td>2</td></tr>
+                <tr><td>1</td><td>-1</td><td>3</td></tr>
+                <tr><td>-2</td><td>0</td><td>7</td></tr>
+            </table>
+            
+            B = 
+            <table>
+                <tr><td>0</td><td>3</td><td>2</td></tr>
+                <tr><td>-4</td><td>0</td><td>-1</td></tr>
+                <tr><td>0</td><td>7</td><td>-3</td></tr>
+            </table>
+        </div>
+
+        <p>Вычислите:</p>
+        <div>
+            A + B = 
+            <table class="input-matrix">
+                <tr>
+                    <td><input class="input-cell" type="number" id="t1a"></td>
+                    <td><input class="input-cell" type="number" id="t1b"></td>
+                    <td><input class="input-cell" type="number" id="t1c"></td>
+                </tr>
+                <tr>
+                    <td><input class="input-cell" type="number" id="t1d"></td>
+                    <td><input class="input-cell" type="number" id="t1e"></td>
+                    <td><input class="input-cell" type="number" id="t1f"></td>
+                </tr>
+                <tr>
+                    <td><input class="input-cell" type="number" id="t1g"></td>
+                    <td><input class="input-cell" type="number" id="t1h"></td>
+                    <td><input class="input-cell" type="number" id="t1i"></td>
+                </tr>
+            </table>
+            <button onclick="checkTask1()">Проверить</button>
+            <span id="result1"></span>
+        </div>
+    </div>
+
+
+
+        <!-- Добавленное задание 2: Вычитание матриц -->
+    <div class="task">
+        <h3>Вычитание матриц</h3>
+        <p>Сделайте вычисления в Excel и проверьте ваш ответ.</p>
+        <p>Даны матрицы из задания 1:</p>
+        <div class="matrix">
+            A = 
+            <table>
+                <tr><td>0</td><td>5</td><td>2</td></tr>
+                <tr><td>1</td><td>-1</td><td>3</td></tr>
+                <tr><td>-2</td><td>0</td><td>7</td></tr>
+            </table>
+            
+            B = 
+            <table>
+                <tr><td>0</td><td>3</td><td>2</td></tr>
+                <tr><td>-4</td><td>0</td><td>-1</td></tr>
+                <tr><td>0</td><td>7</td><td>-3</td></tr>
+            </table>
+        </div>
+
+        <p>Вычислите:</p>
+        <div>
+            A - B = 
+            <table class="input-matrix">
+                <tr>
+                    <td><input class="input-cell" type="number" id="t2a"></td>
+                    <td><input class="input-cell" type="number" id="t2b"></td>
+                    <td><input class="input-cell" type="number" id="t2c"></td>
+                </tr>
+                <tr>
+                    <td><input class="input-cell" type="number" id="t2d"></td>
+                    <td><input class="input-cell" type="number" id="t2e"></td>
+                    <td><input class="input-cell" type="number" id="t2f"></td>
+                </tr>
+                <tr>
+                    <td><input class="input-cell" type="number" id="t2g"></td>
+                    <td><input class="input-cell" type="number" id="t2h"></td>
+                    <td><input class="input-cell" type="number" id="t2i"></td>
+                </tr>
+            </table>
+            <button onclick="checkTask2()">Проверить</button>
+            <span id="result2_new"></span>
+        </div>
+    </div>
+
+
+
+    <!-- Задание 2 -->
+    <div class="task">
+        <h3>Задание 2: Умножение матрицы на число</h3>
+        <div class="description">
+            <p>Рассмотрим матрицу <b>А</b> размерностью <b>3х4</b>. Умножим эту матрицу на число <b>k</b>. При умножении матрицы на число получается матрица такой же размерности, <br>что и исходная, при этом каждый элемент матрицы <b>А</b> умножается на число <b>k.</b>.</p>
+            <img src="media/image5.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Выделяем диапазон, в котором будет вычислен результат, вводим знак <b>«=»</b>, выделяем диапазон, содержащий исходную матрицу <b>А</b>, <br>нажимаем на клавиатуре знак умножить <b>(*)</b> и выделяем ячейку с числом <b>k</b>.</p>
+            <img src="media/image6.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>После ввода формулы нажимаем <b>Enter</b>, чтобы значениями заполнился весь диапазон.</p>
+            <img src="media/image7.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Для выполнения деления в данном примере в диапазон вводим формулу <b>=E35:G37/I36</b>, т.е. знак <b>«*»</b> меняем на <b>«/»</b>.</p>
+            <p>Сделайте вычисления в Excel и проверьте ваш ответ.</p>
+        </div>
+
+	
+	    <p>Дана матрица A = 
+		        <table class="matrix">
+		            <tr><td>1</td><td>0</td><td>2</td></tr>
+		            <tr><td>-1</td><td>3</td><td>0</td></tr>
+		            <tr><td>2</td><td>1</td><td>3</td></tr>
+		        </table>
+		        k = 5
+		</p>
+		    
+		    <!-- Умножение матрицы на число -->
+		    <p>Введите результат умножения:</p>
+		    <div>
+		        A × k = 
+		        <table class="input-matrix">
+		            <tr>
+		                <td><input class="input-cell" type="number" id="t3a"></td>
+		                <td><input class="input-cell" type="number" id="t3b"></td>
+		                <td><input class="input-cell" type="number" id="t3c"></td>
+		            </tr>
+		            <tr>
+		                <td><input class="input-cell" type="number" id="t3d"></td>
+		                <td><input class="input-cell" type="number" id="t3e"></td>
+		                <td><input class="input-cell" type="number" id="t3f"></td>
+		            </tr>
+		            <tr>
+		                <td><input class="input-cell" type="number" id="t3g"></td>
+		                <td><input class="input-cell" type="number" id="t3h"></td>
+		                <td><input class="input-cell" type="number" id="t3i"></td>
+		            </tr>
+		        </table>
+		        <button onclick="checkTask3()">Проверить</button>
+		        <span id="result3"></span>
+		    </div>
+
+	    <!-- Деление матрицы на число -->
+	    <div style="margin-top: 20px;">
+	        <p>Введите результат деления, если число нецелое, использовать точку <b>«.»</b>:</p>
+	        <div>
+	            A / k = 
+	            <table class="input-matrix">
+	                <tr>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3ba"></td>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3bb"></td>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3bc"></td>
+	                </tr>
+	                <tr>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3bd"></td>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3be"></td>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3bf"></td>
+	                </tr>
+	                <tr>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3bg"></td>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3bh"></td>
+	                    <td><input class="input-cell" type="number" step="0.1" id="t3bi"></td>
+	                </tr>
+	            </table>
+	            <button onclick="checkTask3b()">Проверить</button>
+	            <span id="result3b"></span>
+	        </div>
+	    </div>
+	</div>
+
+
+    <!-- Задание 3 -->
+    <div class="task">
+        <h3>Задание 3: Умножение матриц</h3>
+        <div class="description">
+            <p>Следует отметить, что умножать матрицы можно только в том случае, если количество столбцов первой матрицы <b>А</b> равно количеству строк второй матрицы <b>В</b>.
+            <br>Рассмотрим матрицы <b>А</b> размерностью <b>3х3</b> и <b>В</b> размерностью <b>3х3</b>. При умножении этих матриц получится матрица <b>С</b> размерностью <b>3х3</b>.</p>
+            <img src="media/image3.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Вычислим произведение этих матриц <b>С=А*В</b> с помощью встроенной функции <b>=МУМНОЖ()</b>. Для этого в ячейку <b>H77</b> введем формулу <b>=МУМНОЖ()</b>, <br>где <b>массив1</b> и <b>массив2</b> – матрицы <b>А</b> и <b>В</b> соответственно. После нажимаем <b>Enter</b>.</p>
+            <img src="media/image4.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Мы получим результат умножения матриц <b>А</b> и <b>В</b>.</p>
+            <p>Сделайте вычисления в Excel и проверьте ваш ответ.</p>
+        </div>
+
+	<div>
+        <div class="matrix">
+            A = 
+            <table>
+                <tr><td>0</td><td>5</td><td>2</td></tr>
+                <tr><td>1</td><td>-1</td><td>3</td></tr>
+                <tr><td>-2</td><td>0</td><td>7</td></tr>
+            </table>
+            
+            B = 
+            <table>
+                <tr><td>0</td><td>3</td><td>2</td></tr>
+                <tr><td>-4</td><td>0</td><td>-1</td></tr>
+                <tr><td>0</td><td>7</td><td>-3</td></tr>
+            </table>
+        </div>
+
+	    <p>Введите результат A×B:</p>
+	        <table class="input-matrix">
+	            <tr>
+	                <td><input class="input-cell" type="number" id="t4a"></td>
+	                <td><input class="input-cell" type="number" id="t4b"></td>
+	                <td><input class="input-cell" type="number" id="t4c"></td>
+	            </tr>
+	            <tr>
+	                <td><input class="input-cell" type="number" id="t4d"></td>
+	                <td><input class="input-cell" type="number" id="t4e"></td>
+	                <td><input class="input-cell" type="number" id="t4f"></td>
+	            </tr>
+	            <tr>
+	                <td><input class="input-cell" type="number" id="t4g"></td>
+	                <td><input class="input-cell" type="number" id="t4h"></td>
+	                <td><input class="input-cell" type="number" id="t4i"></td>
+	            </tr>
+	        </table>
+	        <button onclick="checkTask4()">Проверить</button>
+	        <span id="result4"></span>
+	    </div>
+
+    <!-- Задание 4 -->
+    <div class="task">
+        <h3>Задание 4: Транспонирование матрицы</h3>
+        <div class="description">
+            <p>Транспонирование матрицы — операция над матрицей, при которой столбцы заменяются строками с соответствующими номерами. Обозначим транспонированную матрицу <b>А<sup>Т</sup></b>.
+            <br>Пусть дана матрица А размерностью <b>3х3</b>, с помощью функции <b>=ТРАНСП()</b> вычислим транспонированную матрицу <b>А<sup>Т</sup></b>, причем размерность этой матрицы будет <b>3х3</b>.</p>
+            <img src="media/image8.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Вводим функцию <b>=ТРАНСП()</b> указываем диапазон массива <b>C97:F99</b>, содержащего элементы матрицы <b>А</b>. После нажимаем <b>Enter</b>.</p>
+            <img src="media/image9.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Мы получим результат транспонированние матрицы <b>А</b>.</p>
+            <img src="media/image10.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Сделайте вычисления в Excel и проверьте ваш ответ.</p>
+        </div>
+
+
+	    <div class="matrix">
+	        A = 
+	        <table>
+	            <tr><td>5</td><td>2</td><td>3</td><td>8</td></tr>
+	            <tr><td>10</td><td>5</td><td>1</td><td>8</td></tr>
+	            <tr><td>3</td><td>6</td><td>7</td><td>0</td></tr>
+	        </table>
+
+	    </div>
+
+
+
+    <!-- Задание 5 -->
+    <div class="task">
+        <h3>Задание 5: Нахождение обратной матрицы.</h3>
+        <div class="description">
+            <p>Матрица A-1 называется обратной по отношению к матрице A, если при умножении этой матрицы на данную как справа, так и слева получается единичная, <br>то есть выполняется условие: A·A-1=A-1·A=E, где E — единичная матрица того же порядка, что и матрица A. <br>Следует отметить, что обратную матрицу можно найти только для квадратной матрицы (одинаковое количество строк и столбцов).
+            <br>Пусть дана матрица А размерностью <b>3х3</b>, с помощью функции <b>=МОБР().</b></p>
+            <img src="media/image11.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Вводим функцию =МОБР() указываем диапазон массива <b>E76:G78</b>, содержащего элементы матрицы <b>А</b>. 
+            <br>После нажимаем <b>Enter</b>.</p>
+            <img src="media/image12.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Мы получим результат транспонированние матрицы<b>А</b>.</p>
+            <img src="media/image13.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Сделайте вычисления в Excel и проверьте ваш ответ.</p>
+        </div>
+
+	    <div class="matrix">
+	        A = 
+	        <table>
+	            <tr><td>2</td><td>8</td><td>6</td></tr>
+	            <tr><td>4</td><td>3</td><td>5</td></tr>
+	            <tr><td>1</td><td>2</td><td>2</td></tr>
+	        </table>
+
+	    </div>
+    </div>
+
+    <!-- Задание 6 -->
+    <div class="task">
+        <h3>Задание 6: Нахождение определителя матрицы.</h3>
+        <div class="description">
+            <p>Пусть дана матрица А размерностью <b>3х3</b>, с помощью функции <b>=МОПРЕД().</b></p>
+            <img src="media/image14.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Вводим функцию =МОПРЕД() указываем диапазон массива <b>E85:G87</b>, содержащего элементы матрицы <b>А</b>. После нажимаем <b>Enter</b>.</p>
+            <img src="media/image15.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Мы получим результат транспонированние матрицы<b>А</b>.</p>
+            <img src="media/image16.png" alt="Сложение матриц в Excel" style="width: 600px; margin: 10px 0;">
+            <p>Сделайте вычисления в Excel и проверьте ваш ответ.</p>
+        </div>
+
+	    <div class="matrix">
+	        A = 
+	        <table>
+	            <tr><td>4</td><td>5</td><td>2</td></tr>
+	            <tr><td>7</td><td>4</td><td>1</td></tr>
+	            <tr><td>3</td><td>1</td><td>5</td></tr>
+	        </table>
+
+	    </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+
+
+
+	<script>
+	    // Обновленный объект answers
+	   	const answers = {
+	        task1: [[0,8,4], [-3,-1,2], [-2,7,4]],
+	        task2: [[0,2,0], [5,-1,4], [-2,-7,10]],
+	        task3: [[5,0,10], [-5,15,0], [10,5,15]],
+	        task3b: [[0.2,0,0.4], [-0.2,0.6,0], [0.4,0.2,0.6]],
+	        task4: [[-20,14,-11], [4,24,-6], [0,43,-25]]
+	    };
+
+	    function checkTask1() {
+	        let correct = true;
+	        const ids = ['t1a','t1b','t1c','t1d','t1e','t1f','t1g','t1h','t1i'];
+	        for(let i=0; i<9; i++) {
+	            const val = parseInt(document.getElementById(ids[i]).value);
+	            const row = Math.floor(i/3);
+	            const col = i%3;
+	            if(val !== answers.task1[row][col]) correct = false;
+	        }
+	        showResult('result1', correct);
+	    }
+
+	    function checkTask2() {
+	        let correct = true;
+	        const ids = ['t2a','t2b','t2c','t2d','t2e','t2f','t2g','t2h','t2i'];
+	        for(let i=0; i<9; i++) {
+	            const val = parseInt(document.getElementById(ids[i]).value);
+	            const row = Math.floor(i/3);
+	            const col = i%3;
+	            if(val !== answers.task2[row][col]) correct = false;
+	        }
+	        showResult('result2_new', correct);
+	    }
+
+	    function checkTask3() {
+	        let correct = true;
+	        const ids = ['t3a','t3b','t3c','t3d','t3e','t3f','t3g','t3h','t3i'];
+	        for(let i=0; i<9; i++) {
+	            const val = parseFloat(document.getElementById(ids[i]).value);
+	            const row = Math.floor(i/3);
+	            const col = i%3;
+	            if(val !== answers.task3[row][col]) correct = false;
+	        }
+	        showResult('result3', correct);
+	    }
+
+	    function checkTask3b() {
+	        let correct = true;
+	        const ids = ['t3ba','t3bb','t3bc','t3bd','t3be','t3bf','t3bg','t3bh','t3bi'];
+	        for(let i=0; i<9; i++) {
+	            const val = parseFloat(document.getElementById(ids[i]).value);
+	            const row = Math.floor(i/3);
+	            const col = i%3;
+	            if(Math.abs(val - answers.task3b[row][col]) > 0.01) correct = false;
+	        }
+	        showResult('result3b', correct);
+	    }
+
+	    function checkTask4() {
+	        let correct = true;
+	        const ids = ['t4a','t4b','t4c','t4d','t4e','t4f','t4g','t4h','t4i'];
+	        for(let i=0; i<9; i++) {
+	            const val = parseInt(document.getElementById(ids[i]).value);
+	            const row = Math.floor(i/3);
+	            const col = i%3;
+	            if(val !== answers.task4[row][col]) correct = false;
+	        }
+	        showResult('result4', correct);
+	    }
+
+	    // Добавляем недостающую функцию
+	    function showResult(elementId, isCorrect) {
+	        const element = document.getElementById(elementId);
+	        element.className = isCorrect ? 'result' : 'error';
+	        element.textContent = isCorrect ? '✓ Верно!' : '✗ Ошибка!';
+	    }
+	</script>
+
+
+</body>
+</html>
