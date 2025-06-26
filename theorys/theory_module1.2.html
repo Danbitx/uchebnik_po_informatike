@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="theory_module1.1.tyles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Теоретическая часть</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html" class="active">Теоретическая часть</a></li>
+                <li><a href="../semester.html">Семестры</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+        <div class="container">
+            <section>
+                <h2>Двоичное представление данных</h2>
+                
+                <div class="theory-content">
+                    <h3>Почему двоичная система?</h3>
+                    <p><b>Двоичное представление данных</b> — это способ кодирования информации с помощью двоичного алфавита, состоящего из двух символов: 0 и 1. Каждый символ называется двоичным разрядом, где 0 обычно обозначает выключенное состояние, а 1 — включённое.</p>
+
+                    <h4>Основные особенности двоичного представления данных:</h4>
+
+                    <ul>
+                        <li>Используется в цифровой технике и вычислительных устройствах, так как электроника легко оперирует двумя состояниями (выключено/включено).</li>
+                        <li>Позволяет представить любую информацию — числа, текст, изображения, звук — в виде последовательности битов (0 и 1).</li>
+                        <li>Для преобразования десятичных чисел в двоичный код используется деление на 2 с сохранением остатков, формирующих битовую последовательность.</li>
+                        <li>Двоичный код может быть равномерным (одинаковое количество бит в кодовых комбинациях) и неравномерным (разное количество бит).</li>
+                    </ul>
+
+                    <h4>Преимущества и недостатки</h4>
+                    <ul>
+                        <li><strong>Преимущества:</strong> простота технической реализации, надежность передачи данных, универсальность в сфере IT и вычислений.</li>
+                        <li><strong>Недостатки:</strong> большая длина кода по сравнению с другими системами, сложность визуализации и анализа без специальных средств.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+
+    
+    <script>
+    // Получаем текущий путь
+        const currentPath = window.location.pathname.split("theorys/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

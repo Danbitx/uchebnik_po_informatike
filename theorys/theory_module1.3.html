@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="theory_module1.1.tyles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Теоретическая часть</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html" class="active">Теоретическая часть</a></li>
+                <li><a href="../semester.html">Семестры</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <section>
+            <h2>Единицы измерения информации</h2>
+            
+            <div class="theory-content">
+                <h3>Почему двоичная система?</h3>
+                <p><b>Единицы измерения информации</b> - это стандартизированные величины, используемые для количественной оценки объёма или ёмкости информации.</p>
+    
+                   
+    
+                <h4>Кратные единицы измерения информации</h4>
+                <p>Единицы измерения информации кратны байту и основаны на степенях двойки (1024 = 2<sup>10</sup>):</p>
+                
+                <table class="units-table">
+                    <thead>
+                        <tr>
+                            <th>Единица</th>
+                            <th>Обозначение</th>
+                            <th>Количество байт</th>
+                            <th>Эквивалент</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Килобайт</td><td>КБ (KiB)</td><td>1024 байт</td><td>2<sup>10</sup></td></tr>
+                        <tr><td>Мегабайт</td><td>МБ (MiB)</td><td>1024 КБ</td><td>2<sup>20</sup></td></tr>
+                        <tr><td>Гигабайт</td><td>ГБ (GiB)</td><td>1024 МБ</td><td>2<sup>30</sup></td></tr>
+                        <tr><td>Терабайт</td><td>ТБ (TiB)</td><td>1024 ГБ</td><td>2<sup>40</sup></td></tr>
+                        <tr><td>Петабайт</td><td>ПБ (PiB)</td><td>1024 ТБ</td><td>2<sup>50</sup></td></tr>
+                        <tr><td>Экзабайт</td><td>ЭБ (EiB)</td><td>1024 ПБ</td><td>2<sup>60</sup></td></tr>
+                        <tr><td>Зеттабайт</td><td>ЗБ (ZiB)</td><td>1024 ЭБ</td><td>2<sup>70</sup></td></tr>
+                        <tr><td>Йоттабайт</td><td>ЙБ (YiB)</td><td>1024 ЗБ</td><td>2<sup>80</sup></td></tr>
+                    </tbody>
+                </table>
+
+                <p class="note"><b>Примечание:</b> 
+                    <ul>
+                        <li>Обозначения в скобках (KiB, MiB) соответствуют стандарту IEC для двоичных приставок</li>
+                        <li>Десятичные приставки (KB, MB) используют основание 1000: 1 KB = 1000 байт</li>
+                        <li>1 килобит = 1000 бит (в телекоммуникациях), но 1 Киббит = 1024 бит</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+
+    
+    <script>
+    // Получаем текущий путь
+        const currentPath = window.location.pathname.split("theorys/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

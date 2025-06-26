@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="theory_module1.1.tyles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Теоретическая часть</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html" class="active">Теоретическая часть</a></li>
+                <li><a href="../semester.html">Семестры</a></li>
+
+        </nav>
+    </header>
+
+        <div class="container">
+            <section>
+                <h2>Архитектура ЭВМ</h2>
+                
+                <div class="theory-content">
+
+                    <p><b>Архитектура ЭВМ</b> — это общее описание его структуры, функций и принципов взаимодействия основных элементов.</p>
+
+                    <h4>Основные компоненты архитектуры ЭВМ:</h4>
+
+                    <ul>
+                        <li>Процессор — центральный элемент, выполняющий арифметико-логические операции и управляющий работой всей системы. В процессоре выделяют арифметико-логическое устройство (АЛУ) и устройство управления (УУ).</li>
+                        <li>Память — хранит данные и команды программы. Память разделена на ячейки с уникальными адресами, в которых хранятся либо данные, либо команды. Принцип однородности памяти предполагает, что команды и данные находятся в одной памяти и обрабатываются одинаково.</li>
+                        <li>Внешние устройства — обеспечивают ввод, вывод и хранение информации вне процессора и основной памяти.</li>                     
+                    </ul>
+                    <h4>Принципы архитектуры ЭВМ.</h4>
+
+                    <ul>
+                        <li>Принцип фон Неймана — основополагающий принцип, согласно которому программа и данные хранятся в одной памяти, а процессор последовательно выполняет команды программы, считывая их из памяти.</li>
+                        <li>Программное управление — процессор выполняет набор команд, заданных программой, автоматически и последовательно.</li>
+                        <li>Адресность памяти — память разделена на ячейки с уникальными адресами, к которым процессор может обращаться напрямую, без необходимости просматривать предыдущие ячейки.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+        </div>
+
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+
+    
+    <script>
+    // Получаем текущий путь
+        const currentPath = window.location.pathname.split("theorys/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

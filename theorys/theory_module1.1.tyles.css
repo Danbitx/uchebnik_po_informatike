@@ -1,0 +1,187 @@
+/* ========== ОБНУЛЕНИЕ ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Белый фон страницы */
+    color: #1b5e20;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+/* ========== HEADER ========== */
+header {
+    background-color: #199cff; /* Светло голубой шапка */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+header h1 {
+    font-size: 2.2rem;
+    padding: 0 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+header nav ul li a.active {
+    border-bottom: 3px solid #87cefa;
+    color: #c5e1a5;
+}
+
+header nav ul li a:hover {
+    color: #a5d6a7;
+}
+
+
+/* ========== КОНТЕЙНЕР ========== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    flex: 1;
+}
+
+/* ========== СЕКЦИИ ========== */
+section {
+    background-color: #54bbf7; /* Светло-голубой фон секций */
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+section h2,
+section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+section p,
+section li {
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+
+/* ========== КОНТЕЙНЕР ========== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    flex: 1;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    margin-top: auto; /* Прижимает футер к низу */
+    background-color: #54bbf7;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+.back-button {
+    position: fixed;
+    bottom: 70px;        
+    left: 10px;
+    font-size: 18px;
+    padding: 5px 15px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;        
+}
+        
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+
+/* theory_module1.1.html styles */
+.theory-content {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.system-type {
+    margin: 25px 0;
+    padding: 15px;
+    border-left: 4px solid #1b5e20;
+}
+
+.special-systems ul {
+    columns: 2;
+    list-style-type: square;
+}
+
+.example {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: #e8f5e9;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+pre {
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    overflow-x: auto;
+}
+
+sub, sup {
+    font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    .special-systems ul {
+        columns: 1;
+    }
+}
+
+.example {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    background: #e8f5e9;
+    border-radius: 4px;
+    font-style: italic;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="theory_module1.1.tyles.css">
+</head>
+<body>
+
+<header>
+    <h1>Теоретическая часть</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">О курсе</a></li>
+            <li><a href="../theory.html" class="active">Теоретическая часть</a></li>
+            <li><a href="../semester.html">Семестры</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <section>
+            <h2>Логические операции</h2>
+            
+            <div class="theory-content">
+
+                <p><b>Логические операции</b> — это действия над логическими значениями (истина или ложь), которые позволяют создавать новые логические выражения из более простых. Они широко применяются в математической логике, программировании и теории множеств.</p>
+
+                <h4>Основные виды логических операций:</h4>
+
+                <ul>
+                    <li>Отрицание (NOT, !) — унарная операция, меняет значение на противоположное: истинное становится ложным, и наоборот.
+                        <div class="table-container">
+                            <table>
+                                <caption>Таблица истинности: NOT</caption>
+                                <tr><th>A</th><th>NOT A</th></tr>
+                                <tr><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td></tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>Конъюнкция (AND, &&, ∧) — логическое умножение, результат истинен, только если оба операнда истинны.
+                        <div class="table-container">
+                            <table>
+                                <caption>Таблица истинности: AND</caption>
+                                <tr><th>A</th><th>B</th><th>A AND B</th></tr>
+                                <tr><td>0</td><td>0</td><td>0</td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td></tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>Дизъюнкция (OR, ||, ∨) — логическое сложение, результат истинен, если хотя бы один операнд истинен.
+                        <div class="table-container">
+                            <table>
+                                <caption>Таблица истинности: OR</caption>
+                                <tr><th>A</th><th>B</th><th>A OR B</th></tr>
+                                <tr><td>0</td><td>0</td><td>0</td></tr>
+                                <tr><td>0</td><td>1</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td></tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>Исключающее ИЛИ (XOR, ^) — результат истинен, если хотя бы один из операндов истинен, иначе ложен.
+                        <div class="table-container">
+                            <table>
+                                <caption>Таблица истинности: XOR</caption>
+                                <tr><th>A</th><th>B</th><th>A XOR B</th></tr>
+                                <tr><td>0</td><td>0</td><td>0</td></tr>
+                                <tr><td>0</td><td>1</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>1</td><td>0</td></tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>Импликация — логическая операция, выражающая условное утверждение (если... то...)
+                        <div class="table-container">
+                            <table>
+                                <caption>Таблица истинности: Импликация</caption>
+                                <tr><th>A</th><th>B</th><th>A → B</th></tr>
+                                <tr><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>0</td><td>1</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td></tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>Эквивалентность — операция, возвращающая истину, если оба операнда равны по значению
+                        <div class="table-container">
+                            <table>
+                                <caption>Таблица истинности: Эквивалентность</caption>
+                                <tr><th>A</th><th>B</th><th>A ≡ B</th></tr>
+                                <tr><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td></tr>
+                            </table>
+                        </div>
+                    </li>                       
+                </ul>
+
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+
+    
+    <script>
+    // Получаем текущий путь
+        const currentPath = window.location.pathname.split("theorys/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

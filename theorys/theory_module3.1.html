@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="theory_module1.1.tyles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Теоретическая часть</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html" class="active">Теоретическая часть</a></li>
+                <li><a href="../semester.html">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+       <div class="container">
+            <section>
+                <h2>Компьютерная арифметика</h2>
+                
+                <div class="theory-content">
+                    <h3>Определение</h3>
+                    <p><b>Компьютерная арифметика</b> — это техническая дисциплина, изучающая принципы представления чисел в вычислительных машинах, методы и алгоритмы выполнения арифметических операций, а также аппаратные средства, реализующие эти операции.</p>
+
+                    <h4>Основные особенности двоичного представления данных:</h4>
+
+                    <ul>
+                        <li>Числа в компьютере представлены в виде последовательностей битов, чаще всего в двоичном коде. Для целых чисел используется, например, дополнительный код для представления отрицательных значений.</li>
+                        <li>Арифметические операции реализуются с помощью микроопераций, таких как сдвиги, сложение, вычитание и логические операции над битами</li>
+                        <li>Умножение и деление реализуются с помощью специальных алгоритмов, которые учитывают двоичную природу данных и оптимизируют вычисления, например, умножение через последовательные сдвиги и сложения.</li>
+                        <li>Помимо целых чисел, рассматриваются представления и операции с числами с плавающей запятой, что важно для выполнения вычислений с вещественными числами (хотя операции с целыми числами обычно выполняются быстрее).</li>
+                    </ul>
+
+                    
+                    <h2>Примеры двоичных арифметических операций</h2>
+
+                    <!-- Сложение -->
+                    <div class="operation">
+                        <h3>Сложение:</h3>
+                        
+                        <div class="example">
+                            <span class="binary">101100<sub>2</sub> + 1011<sub>2</sub></span>
+                            <p>Результат: <code class="binary">110111<sub>2</sub></code></p>
+                        </div>
+
+                        <div class="example">
+                            <span class="binary">101.1001<sub>2</sub> + 1.1111<sub>2</sub></span>
+                            <p>Результат: <code class="binary">111.1000<sub>2</sub></code></p>
+                        </div>
+                    </div>
+
+                    <!-- Вычитание -->
+                    <div class="operation">
+                        <h3>Вычитание:</h3>
+                        
+                        <div class="example">
+                            <table>
+                                <tr><td class="binary">0 − 0</td><td>→</td><td class="binary">0</td></tr>
+                                <tr><td class="binary">1 − 1</td><td>→</td><td class="binary">0</td></tr>
+                                <tr><td class="binary">1 − 0</td><td>→</td><td class="binary">1</td></tr>
+                                <tr><td class="binary">10<sub>2</sub> − 1<sub>2</sub></td><td>→</td><td class="binary">1<sub>2</sub></td></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Умножение -->
+                    <div class="operation">
+                        <h3>Умножение:</h3>
+                        
+                        <div class="example">
+                            <div class="binary">
+                                0 × 0 = 0<br>
+                                0 × 1 = 0<br>
+                                1 × 0 = 0<br>
+                                1 × 1 = 1
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Деление -->
+                    <div class="operation">
+                        <h3>Деление:</h3>
+                        
+                        <div class="example">
+                            <div class="binary">
+                                0 ÷ 1 = 0<br>
+                                1 ÷ 1 = 1
+                            </div>
+                        </div>
+                    </div>
+
+
+                                </div>
+                            </section>
+                        </div>
+
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+
+    
+    <script>
+    // Получаем текущий путь
+        const currentPath = window.location.pathname.split("theorys/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

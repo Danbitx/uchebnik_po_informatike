@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="theory_module1.1.tyles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Теоретическая часть</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">О курсе</a></li>
+                <li><a href="../theory.html" class="active">Теоретическая часть</a></li>
+                <li><a href="../semester.html">Семестры</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+        <div class="container">
+            <section>
+                <h2>Системы счисления</h2>
+                
+                <div class="theory-content">
+                    <h3>Определение</h3>
+                    <p>Система счисления — это символический метод записи чисел, позволяющий представить множество чисел с помощью письменных знаков и обеспечивающий уникальное или стандартное представление каждого числа.</p>
+
+                    <h3>Виды систем счисления</h3>
+                    
+                    <div class="system-type">
+                        <h4>1. Позиционные системы</h4>
+                        <p>Значение цифры зависит от её положения в числе. Основные примеры:</p>
+                        <ul>
+                            <li>
+                                <strong>Двоичная (2)</strong>
+                                <span class="example">Алфавит: 0, 1</span>
+                                <pre><code>101011<sub>2</sub> = 1×2<sup>5</sup> + 0×2<sup>4</sup> + 1×2<sup>3</sup> + 0×2<sup>2</sup> + 1×2<sup>1</sup> + 1×2<sup>0</sup> = 43<sub>10</sub></code></pre>
+                            </li>
+
+                            <li>
+                                <strong>Восьмеричная (8)</strong>
+                                <span class="example">Алфавит: 0-7</span>
+                                <pre><code>1573<sub>8</sub> = 1×8<sup>3</sup> + 5×8<sup>2</sup> + 7×8<sup>1</sup> + 3×8<sup>0</sup> = 891<sub>10</sub></code></pre>
+                            </li>
+                            
+                            <li>
+                                <strong>Десятичная (10)</strong>
+                                <span class="example">Алфавит: 0-9</span>
+                                <pre> Представить число 53<sub>10</sub> в двоичную систему
+                    <code>53 ÷ 2 = 26 (остаток <strong class="remainder">1</strong>)
+                    26 ÷ 2 = 13 (остаток <strong class="remainder">0</strong>)
+                    13 ÷ 2 = 6  (остаток <strong class="remainder">1</strong>)
+                    6 ÷ 2 = 3   (остаток <strong class="remainder">0</strong>)
+                    3 ÷ 2 = 1   (остаток <strong class="remainder">1</strong>)
+                    1 ÷ 2 = 0   (остаток <strong class="remainder">1</strong>)
+                    </code>
+        Результат: 110101<sub>2</sub></pre>
+                            </li>
+
+                            <li>
+                                <strong>Шестнадцатеричная (16)</strong>
+                                <span class="example">Алфавит: 0-9, A-F</span>
+                                <pre><code>7B<sub>16</sub> = 7×16<sup>1</sup> + 11×16<sup>0</sup> = 123<sub>10</sub></code></pre>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="system-type">
+                        <h4>2. Непозиционные системы</h4>
+                        <p>Значение цифры не зависит от позиции. Пример:</p>
+                        <div class="example">
+                            Римская система: XL = 40 (L = 50, X = 10)
+                        </div>
+                    </div>
+
+                    <h3>Специальные системы</h3>
+                    <div class="special-systems">
+                        <ul>
+                            <li><strong>Факториальная</strong> - основана на факториалах</li>
+                            <li><strong>Фибоначчи</strong> - запрещены две единицы подряд</li>
+                            <li><strong>Штерна-Броко</strong> - для рациональных чисел</li>
+                            <li><strong>Классов остатков</strong> - китайская теорема об остатках</li>
+                        </ul>
+                    </div>
+
+                    <h3>Смешанные системы</h3>
+                    <p>Основание меняется для разных разрядов. Пример:</p>
+                    <div class="example">
+                        Время: 12:34:56 (часы:основание 24, минуты:60, секунды:60)
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+
+    
+    <script>
+    // Получаем текущий путь
+        const currentPath = window.location.pathname.split("theorys/").pop(); 
+    
+    // Находим все ссылки в навигации
+        const navLinks = document.querySelectorAll("header nav ul li a");
+    
+        navLinks.forEach(link => {
+        // Сравниваем путь ссылки с текущим путем
+            if (currentPath.includes(link.getAttribute("href"))) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>
