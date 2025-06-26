@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Семестр 2</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">О курсе</a></li>
+                <li><a href="theory.html">Теоретическая часть</a></li>
+                <li><a href="semester.html" class="active">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Семестр 2</h2>
+            <div class="modules-grid">
+
+                <!-- Раздел 4 -->
+                <a href="semester3/semester_razdel_3.4.html" class="module-card">
+                    <h3>РАЗДЕЛ 4. Системы управления базами данных</h3>
+                    <p>Тема 4.1. Элементы теории баз данных (БД)<br>Тема 4.2. Реляционная СУБД MS Access.</p>
+                </a>
+
+                <!-- Раздел 5 -->
+                <a href="semester3/semester_razdel_3.5.html" class="module-card">
+                    <h3>РАЗДЕЛ 5. Модели решения задач</h3>
+                    <p>Тема 5.1. Классификация и формы представления моделей.<br>Тема 5.2. Методы и технологии моделирования.</p>
+                </a>
+
+                <!-- Раздел 6 -->
+                <a href="semester3/semester_razdel_3.6.html" class="module-card">
+                    <h3>РАЗДЕЛ 6. Алгоритмизация и технологии программирования</h3>
+                    <p>Тема 6.1. Алгоритмизация.<br>Тема 6.2. Технологии программирования.</p>
+                </a>
+
+                <!-- Раздел 7 -->
+                <a href="semester3/semester_razdel_3.7.html" class="module-card">
+                    <h3>РАЗДЕЛ 7. Локальные и глобальные сети ЭВМ</h3>
+                    <p>Тема 7.1. Сетевые технологии обработки данных.<br>Тема 7.2. Сетевой сервис и сетевые стандарты.</p>
+                </a>
+
+                <!-- Раздел 8 -->
+                <a href="semester3/semester_razdel_3.8.html" class="module-card">
+                    <h3>РАЗДЕЛ 8. Основы защиты информации</h3>
+                    <p>Тема 8.1. Элементы компьютерной вирусологии.<br>Тема 8.2. Методы защиты информации.</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

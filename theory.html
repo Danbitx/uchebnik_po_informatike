@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Теоретическая часть</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">О курсе</a></li>
+                <li><a href="theory.html" class="active">Теоретическая часть</a></li>
+                <li><a href="semester.html">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Модули</h2>
+            <div class="modules-grid">
+
+                <!-- Модуль 1 -->
+                <a href="theory/theory_module1.html" class="module-card">
+                    <h3>Модуль 1: Информация и её кодирование</h3>
+                    <p>Системы счисления. Двоичное представление данных. Единицы измерения информации.</p>
+                </a>
+
+                <!-- Модуль 2 -->
+                <a href="theory/theory_module2.html" class="module-card">
+                    <h3>Модуль 2: Алгебра логики</h3>
+                    <p>Логические операции. Схемы на базе булевых функций.</p>
+                </a>
+
+                <!-- Модуль 3 -->
+                <a href="theory/theory_module3.html" class="module-card">
+                    <h3>Модуль 3: Компьютерная арифметика</h3>
+                    <p>Определение. Вычисления с фиксированной точкой. Вычисления с плавающей точкой.</p>
+                </a>
+
+                <!-- Модуль 4 -->
+                <a href="theory/theory_module4.html" class="module-card">
+                    <h3>Модуль 4: Архитектура ЭВМ</h3>
+                    <p>Архитектура ЭВМ. Схема архитектуры ЭВМ.</p>
+                </a>
+
+                <!-- Модуль 5 -->
+                <a href="theory/theory_module5.html" class="module-card">
+                    <h3>Модуль 5: Алгоритмы</h3>
+                    <p>Алгоритмы.</p>
+                </a>
+
+
+            </div>
+        </section>
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* ========== ОБНУЛЕНИЕ ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Белый фон страницы */
+    color: #1b5e20;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+/* ========== HEADER ========== */
+header {
+    background-color: #199cff; /* Светло-голубой фон шапки*/
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+header h1 {
+    font-size: 2.2rem;
+    padding: 0 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* ========== текст вверх ========== */
+header nav ul li a { 
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+header nav ul li a.active {
+    border-bottom: 3px solid #87cefa;
+    color: #003841; /* текст вкладок */
+}
+
+header nav ul li a:hover {
+    color: #0e688f;
+}
+
+
+/* ========== КОНТЕЙНЕР ========== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    flex: 1;
+}
+
+/* ========== СЕКЦИИ ========== */
+section {
+    background-color: #54bbf7; /* Светло-голубой фон секций */
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #1b5e20;
+}
+
+section h2,
+section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+section p,
+section li {
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+/* ========== КАРТОЧКИ МОДУЛЕЙ ========== */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.module-card {
+    display: block;
+    background-color: #ffffff; /* Белые карточки */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #1b5e20;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.module-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.module-card h3 {
+    font-size: 1.3rem;
+    padding: 15px 15px 5px;
+    color: #000000;
+}
+
+.module-card p {
+    font-size: 1rem;
+    padding: 0 15px 15px;
+    color: #330009;
+}
+
+/* ========== СТИЛИ ДЛЯ ТЕСТОВ ========== */
+.test {
+    background-color: #87cefa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #1b5e20;
+}
+
+.test h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #1b5e20;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-top: 10px;
+}
+
+.options label {
+    display: block;
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #36281d; /* цвет текста теста */
+}
+
+button {
+    background-color: #388e3c; /* яркая зелёная */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.back-button {
+    position: fixed;
+    bottom: 70px;        
+    left: 10px;
+    font-size: 18px;
+    padding: 5px 15px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;        
+}
+        
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#result,
+#resultAHP {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    margin-top: auto; /* Прижимает футер к низу */
+    background-color: #54bbf7;
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; 
+    z-index: 1;          /* Футер под кнопкой */
+    /*padding-bottom: 60px; /* Отступ для кнопки */
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .test {
+        padding: 15px;
+    }
+}
+
+/* ==========  ========== */
+
+/* Стили для заголовка с иконкой */
+.module-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 15px 5px;
+}
+
+.module-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    filter: invert(28%) sepia(90%) saturate(384%) hue-rotate(87deg) brightness(93%) contrast(88%);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .module-icon {
+        width: 22px;
+        height: 22px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практические задания</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Семестры</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">О курсе</a></li>
+                <li><a href="theory.html">Теоретическая часть</a></li>
+                <li><a href="semester.html" class="active">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="tasks">
+            <h2>Семестры</h2>
+            <div class="modules-grid">
+
+                <!-- семестр 2 -->
+                <a href="semester_2.html" class="module-card">
+                    <h3>Семестр 1</h3>
+                    <p></p>
+                </a>
+
+                <!-- семестр 3 -->
+                <a href="semester_3.html" class="module-card">            
+                    <h3>Семестр 2</h3>
+                    <p></p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>

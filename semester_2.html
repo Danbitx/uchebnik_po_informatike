@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоретическая часть</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Семестр 1</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">О курсе</a></li>
+                <li><a href="theory.html">Теоретическая часть</a></li>
+                <li><a href="semester.html" class="active">Семестры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Семестр 1</h2>
+            <div class="modules-grid">
+
+                <!-- Раздел 1 -->
+                <a href="semester2/semester_razdel_2.1.html" class="module-card">
+                    <h3>РАЗДЕЛ 1. Общая характеристика процессов обработки информации</h3>
+                    <p>Тема 1.1. Основные понятия и методы теории информатики и кодирования.<br>Тема 1.2. Общая характеристика процессов сбора, передачи, обработки и накопления информации.</p>
+                </a>
+
+                <!-- Раздел 2 -->
+                <a href="semester2/semester_razdel_2.2.html" class="module-card">
+                    <h3>РАЗДЕЛ 2. Технические средства реализации информационных процессов</h3>
+                    <p>Тема 2.1. Архитектура ЭВМ. Схемы на базе булевых функций.<br>Тема 2.2. Состав и назначение основных элементов персонального компьютера</p>
+                </a>
+
+                <!-- Раздел 3 -->
+                <a href="semester2/semester_razdel_2.3.html" class="module-card">
+                    <h3>РАЗДЕЛ 3. Программные средства реализации информационных процессов</h3>
+                    <p>Тема 3.1. Операционная система MS Windows<br> Тема 3.2. Служебное программное обеспечение.<br>Тема 3.3. Технология обработки текстовой информации.<br>Тема 3.4. Электронные таблицы.</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Кнопка "Назад" -->
+    <a href="#" onclick="history.back(); return false;" class="back-button">Назад</a>
+
+
+    <footer>
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <!-- Скрипт активной вкладки -->
+    <script>
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("header nav ul li a");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+
+</body>
+</html>
